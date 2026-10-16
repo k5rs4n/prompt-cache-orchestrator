@@ -121,6 +121,16 @@ python tools/prompt_cache_compiler.py compile \
 
 ---
 
+## 🤖 Otomatik Devreye Alma Protokolü
+
+Antigravity'nin global kural dosyasına (`~/.gemini/GEMINI.md`) otomatik sorgu protokolü entegre edilmiştir. 
+
+Artık siz herhangi bir kodlama veya teknik görev verdiğinizde, Antigravity göreve doğrudan başlamak yerine size sorar:
+> *"Bu görevi token tasarrufu ve context optimizasyonu için **Prompt Cache Orchestrator** ve alt ajan (sub-agent) ile yürüteyim mi?"*
+
+* **Evet / Devreye Al:** İlgili dosyaları context olarak alır, `[CACHE-STATIC-PREFIX]` ile promptu derler ve izole alt ajan başlatır.
+* **Hayır / Gerek Yok:** Görevi standart şekilde mevcut oturumda tamamlar.
+
 ## 🛠️ Antigravity İçinde Kullanım Örneği
 
 Sohbet esnasında Antigravity'ye doğrudan şöyle diyebilirsiniz:

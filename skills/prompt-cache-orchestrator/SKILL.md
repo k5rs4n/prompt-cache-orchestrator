@@ -8,6 +8,14 @@ version: "1.0.0"
 
 This skill enables Antigravity to act as an intelligent **Prompt Compiler & Orchestrator**. Instead of solving every user task directly in the main conversation (which accumulates context and consumes high tokens) or passing raw, unoptimized prompts to sub-agents, this skill structures every sub-agent prompt to achieve **maximal Prompt Cache Hits (up to 80-90% token savings)**.
 
+## Proactive Confirmation Protocol (Soru Protokolü)
+
+Whenever a coding task, bug fix, refactor, or multi-step technical request is received:
+1. **Always Ask the User First:**
+   - Proactively ask: *"Bu görevi token tasarrufu ve context optimizasyonu için **Prompt Cache Orchestrator** ve alt ajan (sub-agent) ile yürüteyim mi?"*
+2. **If Approved:** Proceed with the 3-tier prompt compilation and dispatch via `invoke_subagent`.
+3. **If Declined:** Proceed normally within the current session.
+
 ## Core Architecture: The 3-Tier Prefix Cache
 
 Modern LLMs (Anthropic Claude 3.5 Sonnet/Haiku, OpenAI GPT-4o, Google Gemini 2.5/3.8) utilize **Prefix Caching**. The cache is evaluated strictly from left to right (from top to bottom). Any alteration in the prefix breaks the cache chain.
